@@ -1,0 +1,120 @@
+* {
+  font-family: "Bonbon", "Zen Kurenaido", cursive; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto; }
+
+header {
+  height: 700px; }
+
+.mv img {
+  width: 100%;
+  height: 700px; }
+
+/*	blog   */
+#contents {
+  margin: 89px auto; }
+
+h3 {
+  margin-left: 93px;
+  font-size: 40px;
+  color: #1B2C8B; }
+
+.blog_inner {
+  width: 985px;
+  margin: 137px auto 100px auto;
+  display: flex;
+  justify-content: space-between;
+  color: #707070; }
+
+.blog_box {
+  width: 260px; }
+  .blog_box:hover {
+    margin-top: -20px;
+    transition: 0.3s; }
+  .blog_box a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 18px; }
+
+.blog_box_txt {
+  padding: 10px 20px; }
+  .blog_box_txt time {
+    font-size: 20px; }
+  .blog_box_txt h2 {
+    line-height: 26px;
+    margin-top: 6px; }
+
+footer {
+  background-color: #C8E3D4; }
+
+.footer_inner {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px; }
+
+.pageLoading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D6F2FF; }
+  .pageLoading.complete {
+    padding: 1;
+    display: none; }
+
+.sun .s {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #FFF039;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: up 2s; }
+@keyframes up {
+  100% {
+    margin-top: -80px; } }
+.sun .cir6 {
+  background-color: transparent;
+  border: 2px solid #707070;
+  margin-left: 30px; }
+.sun .cir7 {
+  margin-left: 45px;
+  margin-top: 20px; }
+
+.cloud [class^="cir"] {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #FFF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+.cloud .cir1 {
+  margin-top: -40px;
+  margin-left: -20px; }
+.cloud .cir2 {
+  margin-left: -80px; }
+.cloud .cir3 {
+  margin-left: -30px;
+  margin-top: 50px; }
+.cloud .cir4 {
+  margin-left: 37px;
+  margin-top: 40px; }
+.cloud .cir5 {
+  width: 110px;
+  height: 110px;
+  margin-left: 40px;
+  margin-top: -20px; }

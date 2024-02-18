@@ -1,0 +1,548 @@
+* {
+  font-family: "Lobster", "Kaisei Tokumin", "Zen Kurenaido", cursive;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#pageLoading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #22577E;
+  z-index: 9999999;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: opacity 0.5s 0.5s;
+  transition: opacity 0.5s 0.5s;
+}
+
+body {
+  background-color: #22577E;
+}
+
+body.appear {
+  background-color: white;
+}
+
+.splashbg {
+  display: none;
+  content: "";
+  position: fixed;
+  -webkit-transform: scale(100);
+          transform: scale(100);
+  background-color: #D5EBEA;
+  z-index: 55555;
+  top: calc(50% - 1rem);
+  left: calc(50% - 1rem);
+  width: 2rem;
+  height: 2rem;
+}
+
+body.appear .splashbg {
+  display: block;
+  border-radius: 50%;
+  -webkit-animation: PageAnime 1s forwards;
+          animation: PageAnime 1s forwards;
+}
+@-webkit-keyframes PageAnime {
+  0% {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none;
+  }
+}
+@keyframes PageAnime {
+  0% {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none;
+  }
+}
+
+#top {
+  opacity: 0;
+}
+
+body.appear #top {
+  -webkit-animation: PageAnimeAppear 1s 0.8s forward;
+          animation: PageAnimeAppear 1s 0.8s forward;
+  opacity: 1;
+}
+@-webkit-keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-family: "Lobster", cursive;
+  text-decoration: none;
+  font-size: 20px;
+  color: #22577E;
+}
+a:hover {
+  color: #A45D5D;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.logo {
+  width: 93px;
+  height: auto;
+  margin-top: 14px;
+  margin-left: 20px;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+  text-align: center;
+  color: #A45D5D;
+}
+
+h2 {
+  font-family: "Kaisei Tokumin", cursive;
+  font-size: 30px;
+}
+
+h3 {
+  font-family: "Kaisei Tokumin", cursive;
+  font-size: 22px;
+}
+
+p, .sp_br {
+  font-family: "Zen Kurenaido", cursive;
+  font-size: 18px;
+}
+
+li {
+  font-family: "Zen Kurenaido", cursive;
+  font-size: 18px;
+}
+
+#top {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.big-bg {
+  background-image: url(../image/contactmv.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 auto;
+}
+
+#page-header {
+  z-index: 999;
+  position: fixed;
+  width: 123px;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav {
+  margin: 20px auto;
+  line-height: 1.7;
+  z-index: 100;
+}
+
+a.contact {
+  font-size: 30px;
+  color: #A45D5D;
+  pointer-events: none;
+}
+
+.line {
+  margin-top: -100px;
+}
+
+#content {
+  max-width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bg {
+  background-image: url(../image/contactbgi.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.box {
+  max-width: 1004px;
+  max-height: 2140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 90px auto 200px;
+}
+
+.btn {
+  position: relative;
+  margin: 45px auto;
+}
+
+.coding {
+  display: block;
+  border-radius: 20px;
+  padding: 27px 58px;
+  background-color: #F2DDC1;
+  z-index: 50;
+}
+.coding:hover {
+  background-color: #D5EBEA;
+  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.codebtn2 {
+  position: relative;
+  border-radius: 20px;
+  width: 224px;
+  height: 85px;
+  background-color: #F6A9A9;
+  top: -70px;
+  left: 30px;
+}
+
+#footer {
+  background-color: #D5EBEA;
+}
+#footer .footer_inner {
+  font-family: "Zen Kurenaido", cursive;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 599px) {
+  body {
+    position: relative;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-family: "Lobster", cursive;
+    font-size: 34px;
+    text-align: center;
+    color: #A45D5D;
+  }
+
+  h2 {
+    font-family: "Kaisei Tokumin", cursive;
+    font-size: 18px;
+  }
+
+  h3 {
+    font-family: "Kaisei Tokumin", cursive;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  p, .sp_br {
+    font-family: "Zen Kurenaido", cursive;
+    font-size: 14px;
+  }
+
+  li {
+    font-family: "Zen Kurenaido", cursive;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .big-bg {
+    background-image: url(../image/contactmvsp.png);
+  }
+
+  #page-header {
+    z-index: 999;
+    width: 100%;
+    min-height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 100;
+  }
+
+  li.txt {
+    margin: auto 10px;
+  }
+
+  a.contact {
+    font-size: 18px;
+  }
+
+  .line {
+    width: 100vh;
+    margin-top: -30px;
+  }
+
+  .bg {
+    background-image: url(../image/contactbgisp.png);
+  }
+
+  .box {
+    max-width: 499px;
+    max-height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px auto 40px;
+    padding: 0 15px;
+  }
+
+  .btn {
+    margin: 30px auto;
+  }
+
+  .coding {
+    border-radius: 5px;
+    padding: 10px 15px;
+    -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .codebtn2 {
+    display: none;
+  }
+
+  #footer {
+    background-color: #D5EBEA;
+  }
+  #footer .footer_inner {
+    font-family: "Zen Kurenaido", cursive;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  body {
+    position: relative;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-family: "Lobster", cursive;
+    font-size: 38px;
+    text-align: center;
+    color: #A45D5D;
+  }
+
+  h2 {
+    font-family: "Kaisei Tokumin", cursive;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-family: "Kaisei Tokumin", cursive;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  p, .sp_br {
+    font-family: "Zen Kurenaido", cursive;
+    font-size: 16px;
+  }
+
+  li {
+    font-family: "Zen Kurenaido", cursive;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .big-bg {
+    background-image: url(../image/contactmvipad.png);
+  }
+
+  #page-header {
+    z-index: 999;
+    width: 100%;
+    min-height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 100;
+  }
+
+  li.txt {
+    margin: auto 10px;
+  }
+
+  a.contact {
+    font-size: 20px;
+  }
+
+  .line {
+    width: 100vh;
+    margin-top: -30px;
+  }
+
+  .bg {
+    background-image: url(../image/contactbgiipad.png);
+  }
+
+  .box {
+    max-width: 608px;
+    max-height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px auto 40px;
+  }
+
+  .btn {
+    margin: 40px auto;
+  }
+
+  .coding {
+    border-radius: 5px;
+    padding: 10px 15px;
+    -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .codebtn2 {
+    display: none;
+  }
+
+  #footer {
+    background-color: #D5EBEA;
+  }
+  #footer .footer_inner {
+    font-family: "Zen Kurenaido", cursive;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+  }
+}

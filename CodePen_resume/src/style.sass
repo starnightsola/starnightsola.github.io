@@ -1,0 +1,237 @@
+$color-blue: #CEE4E1
+$color-red: #C76578
+$color-yellow: #EDE5A6
+$color-green: #C1DB8D
+$color-gray: #60605F
+$color-white: #f7f7f7
+$font-base-size: 15px
+
+
+*
+  // border: solid 1px black
+  font-family: 'M PLUS 1p', 'Recursive', sans-serif
+  font-size: 14px
+  color: #60605F
+@mixin center
+  display: flex
+  justify-content: center
+  align-items: center
+@mixin row
+  display: flex
+  flex-direction: row
+@mixin size($w,$h)
+  width: $w
+  height: $h
+body
+  padding: 50px
+  +center
+  line-height: 28px
+  letter-spacing: 2px
+  background-color: $color-gray
+  
+ul
+  padding: 0
+  list-style: none
+h1
+  font-size: 24px
+  font-weight: 700
+  span
+    font-size: 16px
+    padding-left: 10px
+h2
+  font-size: 20px
+  margin: 0
+  margin-bottom: 20px
+  font-weight: 400
+  &.pa40
+    margin-top: 40px
+  &.hr
+    margin-bottom: 0
+
+a
+  text-decoration: none
+hr
+  border: none
+  border-bottom: 4px solid $color-red
+  width: 40%
+  margin-left: 0
+  
+  
+  
+.resume
+  display: flex
+  max-width: 800px
+  width: 800px
+  border: solid 1px
+  padding: 50px
+  position: relative
+  flex-direction: column
+  box-sizing: border-box
+  background-color: $color-blue
+.top
+  +size(100%,250px)
+  margin-bottom: 40px
+  position: relative
+  border-radius: 20px
+  background-color: $color-white
+.decoration
+  margin: 0px
+  +size(100%,70px)
+  border-radius: 20px 20px 0px 0px
+  background-color: $color-red
+.toptotal
+  +row
+  
+.left1
+  position: absolute
+  +size(480px,190px)
+  margin-top: -75px
+  padding-right: 0px
+  padding-top: 60px
+  border-right: dashed 7px $color-green
+  +row
+  
+  
+.picture
+  +size(90px,120px)
+  margin-left: 30px
+  margin-top: 50px
+  
+.name
+  margin: 20px 10px 10px 40px
+  .hira
+    margin-top: -20px
+    font-size: 18px
+  .add
+    display: flex
+    .icon
+      flex: 1
+      +size(50px,30px)
+      margin-top: 30px
+      padding-left: 30px
+    ul
+      flex: 8
+      padding-left: 20px
+      margin-top: 25px
+      li
+        padding-top: 5px
+     
+
+.circle
+  +size(60px,60px)
+  position: absolute
+  border-radius: 50%
+  right: 0px
+  bottom: -30px
+  background-color: $color-green
+
+
+.plane
+  
+  position: absolute
+  +size(200px,250px)
+  padding: 0px
+  background-position: center
+  right: 30px
+  bottom: 55px
+.bottom
+  display: flex
+.left3
+  flex: 6
+  padding-right: 50px
+  border-right: solid 5px $color-red
+  
+  
+.right4
+  flex: 4
+  padding-top: 40px
+  padding-left: 50px
+.ed
+  >li
+    display: flex
+    
+
+  li ul
+    padding-left: 10px
+    margin-left: 10px
+.listCp
+  
+  .bar1
+    display: flex
+    margin-right: 30px
+    &.c3
+      .smcircle1,.smcircle2,.smcircle3,.smcircle4
+        background-color: darken($color-yellow,20)
+    &.c2
+      .smcircle1,.smcircle2,.smcircle3
+        background-color: darken($color-yellow,20)
+  li
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 15px
+    &.no
+      padding-top: 0px
+    
+    .smcircle
+      
+      +size(18px,18px)
+      flex-direction: row
+      border-radius: 50%
+      border: solid 2px darken($color-yellow,20)
+    
+      
+      
+    
+    
+.listSkill
+  .bar2
+    width: 150px
+    height: 20px
+    border: solid 2px darken($color-yellow,20)
+    border-radius: 5px
+  li
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 15px
+  .valus
+    height: 100%
+    width: 60%
+    background-color: darken($color-yellow,20)
+    &.p10
+      width: 10%
+    &.p20
+      width: 20%
+    &.p30
+      width: 30%
+    &.p40
+      width: 40%
+    &.p50
+      width: 50%
+    &.p60
+      width: 60%
+    &.p70
+      width: 70%
+    &.p80
+      width: 80%
+    &.p90
+      width: 90%
+    &.p100
+      width: 100%
+
+  
+  
+  
+  
+  
+  
+    
+    
+    
+
+    
+    
+    
+  
+  

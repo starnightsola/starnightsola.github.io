@@ -1,0 +1,149 @@
+// Sass Document
+$colortitle: #1B2C8B
+$colorfooter: #C8E3D4
+$colorword: #707070
+$colorBlue: #D6F2FF
+$colorwhite: #FFF
+$coloryellow: #FFF039
+$colorgrey: #707070
+
+=size($w,$h:$w)
+	width: $w
+	height: $h
+  
+=flexCenter
+	display: flex
+	justify-content: center
+	align-items: center
+=ab_center
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%,-50%)
+
+
+*
+	font-family: 'Bonbon','Zen Kurenaido', cursive
+	
+html,body
+	
+	margin: 0
+	padding: 0
+	+size(100%,auto)
+
+header
+	height: 700px
+	
+.mv
+
+	img
+    	
+		+size(100%,700px)
+
+/*	blog   */
+#contents
+	margin: 89px auto
+h3
+	margin-left: 93px
+	font-size: 40px
+	color: $colortitle
+	
+.blog_inner
+	width: 985px
+	margin: 137px auto 100px auto
+	display: flex
+	justify-content: space-between
+	color: $colorword
+.blog_box
+	width: 260px
+	&:hover
+		margin-top: -20px
+
+		transition: .3s
+
+	a
+		text-decoration: none
+		color: #707070
+		font-size: 18px
+.blog_box_txt
+	padding: 10px 20px
+	time
+		font-size: 20px
+	h2
+		line-height: 26px
+		margin-top: 6px
+
+	
+footer
+	background-color: $colorfooter
+.footer_inner
+	width: 100%
+	margin: 0 auto
+	text-align: center
+	font-size: 12px
+	padding: 10px
+
+.pageLoading
+	
+	position: fixed
+	+size(100%)
+	left: 0
+	top: 0
+	+flexCenter
+	background-color: $colorBlue
+
+	&.complete
+
+		padding: 1
+
+		
+		display: none
+.sun
+	.s
+		@keyframes up
+
+			100%
+				margin-top: -80px
+
+		+size(70px)
+		border-radius: 50%
+		background-color: $coloryellow
+		+ab_center
+		animation: up 2s
+	.cir6
+		background-color: transparent
+		border: 2px solid $colorgrey
+		margin-left: 30px
+	.cir7
+		margin-left: 45px
+		margin-top: 20px
+
+	
+
+
+.cloud
+	[class^="cir"]
+		+size(100px)
+		border-radius: 50%
+		background-color: $colorwhite
+		+ab_center
+	.cir1
+		margin-top: -40px
+		margin-left: -20px
+	.cir2
+		margin-left: -80px
+	.cir3
+		margin-left: -30px
+		margin-top: 50px
+	.cir4
+		margin-left: 37px
+		margin-top: 40px
+
+	.cir5
+		+size(110px)
+		margin-left: 40px
+		margin-top: -20px
+
+
+
+

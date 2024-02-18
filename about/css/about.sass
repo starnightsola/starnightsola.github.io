@@ -1,0 +1,460 @@
+$color-blue: #22577E
+$color-red: #A45D5D
+$color-green:#D5EBEA
+=size($w,$h:$w,$bdrs:0)
+  width: $w
+  height: $h
+  border-radius: $bdrs
+=flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+*
+
+    font-family: 'Lobster', 'Kaisei Tokumin', 'Zen Kurenaido', cursive
+    margin: 0
+    padding: 0
+    position: relative
+#pageLoading
+    position: fixed
+    +size(100%)
+    left: 0
+    top: 0
+    +flexCenter
+    background-color: $color-blue
+    z-index: 9999999
+    flex-direction: column
+    transition: opacity 0.5s 0.5s
+// 画面遷移
+body
+    background-color: $color-blue
+body.appear
+    background-color: white
+.splashbg
+    display: none
+    content: ""
+    position: fixed
+    transform: scale(100)
+    background-color: $color-green
+    z-index: 55555
+    top: calc(50% - 1rem)
+    left: calc(50% - 1rem)
+    width: 2rem
+    height: 2rem
+body.appear .splashbg
+    display: block
+    border-radius: 50%
+    animation: PageAnime 1s forwards
+    @keyframes PageAnime
+        0%
+            transform: scale(100)
+        100%
+            transform: scale(0)
+            display: none
+#top
+    opacity: 0
+body.appear #top
+    animation: PageAnimeAppear 1s 0.8s forward
+    opacity: 1
+    @keyframes PageAnimeAppear
+        0%
+            opacity: 0
+        100%
+            opacity: 1
+
+
+// レイアウト
+body
+    
+    max-width: 100%
+    margin: 0 auto
+    line-height: 1.7
+img
+    width: 100%
+    height: auto
+ul
+    list-style: none
+a
+    font-family: 'Lobster', cursive
+    text-decoration: none
+    font-size: 20px
+    color: $color-blue
+    &:hover
+        color: $color-red
+        transition: 0.5s
+
+.logo
+    width: 93px
+    height: auto
+    margin-top: 14px
+    margin-left: 20px
+h1
+    font-family: 'Lobster', cursive
+    font-size: 50px
+    text-align: center 
+    color: $color-red
+h2
+    font-family: 'Kaisei Tokumin', cursive
+    font-size: 30px
+h3
+    font-family:  'Kaisei Tokumin', cursive
+    font-size: 22px
+p,.sp_br
+    font-family:  'Zen Kurenaido', cursive
+    font-size: 18px
+li
+    font-family:  'Zen Kurenaido', cursive
+    font-size: 18px
+
+#top
+    max-width: 100%
+    min-height: 100vh
+    
+.big-bg
+    background-image: url(../image/about.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 0 auto
+#page-header 
+    z-index: 999
+    position: fixed
+    width: 123px
+    min-height: 100vh
+
+    background-color: rgba(255,255,255,0.5)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+
+nav
+    margin: 20px auto
+    line-height: 1.7
+    z-index: 100
+a.about
+    font-size: 30px
+    color: $color-red
+    pointer-events: none
+.line
+    margin-top: -100px
+// content
+#content
+    max-width: 100%
+    height: auto
+    display: flex
+    justify-content: center
+    position: relative
+    flex-direction: column
+    box-sizing: border-box
+.bg
+    background-image: url(../image/aboutnew.png)
+    background-size: 100% auto
+    background-repeat: no-repeat
+    background-position: 0 0
+.box
+    max-width: 1004px
+    max-height: 2140px
+    display: flex
+    margin: 90px auto 200px
+
+    
+
+
+.left
+    flex: 6
+    padding-right: 200px
+.right
+    flex: 4
+    margin-top: 1057px
+h2
+    margin-top: 80px
+    margin-bottom: 47px
+.no
+    margin-top: 0
+h3
+    margin-top: 26px
+    margin-bottom: 15px
+.word
+    width: 500px
+.cwp
+    padding-top: 100px
+.year
+    padding: 20px 0
+.skill
+    padding-left: 300px
+    padding-top: 180px
+
+[class^="listSkill"]
+    >li
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 20px
+
+.bar1
+    display: flex
+    &.c4
+      .smcircle1,.smcircle2,.smcircle3,.smcircle4
+        background-color: $color-blue
+    &.c3
+      .smcircle1,.smcircle2,.smcircle3
+        background-color: $color-blue
+    &.c2
+      .smcircle1,.smcircle2
+        background-color: $color-blue
+[class^="smcircle"]
+    +size(18px,18px)
+    flex-direction: row
+    border-radius: 50%
+    border: solid 2px $color-blue
+    margin-right: 5px
+.coding
+    margin-top: 350px
+.listSkill2
+    margin-left: 0px
+.l
+    margin-right: 60px
+#footer
+    background-color: $color-green
+    .footer_inner
+        font-family:  'Zen Kurenaido', cursive
+        width: 100%
+        margin: 0 auto
+        text-align: center
+        font-size: 12px
+        padding: 10px
+
+
+@media only screen and (max-width:599px)
+
+    body
+        position: relative
+    a
+        font-size: 16px
+    h1
+        font-family: 'Lobster', cursive
+        font-size: 34px
+        text-align: center 
+        color: $color-red
+    h2
+        font-family: 'Kaisei Tokumin', cursive
+        font-size: 18px
+    h3
+        font-family:  'Kaisei Tokumin', cursive
+        font-size: 16px
+        line-height: 1.7
+    p,.sp_br
+        font-family:  'Zen Kurenaido', cursive
+        font-size: 14px
+    li
+        font-family:  'Zen Kurenaido', cursive
+        font-size: 14px
+        line-height: 1.7
+    .big-bg
+        background-image: url(../image/aboutsp.png)
+    #page-header
+        z-index: 999
+        
+        width: 100%
+        min-height: 80px
+        
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        position: fixed
+        top: 0
+        background-color: rgba(255,255,255,0.5)
+    
+    .main-nav
+        
+        display: flex
+        z-index: 100
+    li.txt
+        margin: auto 10px
+
+
+    a.about
+        font-size: 18px
+    .line
+        width: 100vh
+        margin-top: -30px
+
+    .bg
+        background-image: url(../image/aboutbgi_sp.png)
+    .box
+        max-width: 302px
+        max-height: auto
+        display: flex
+        flex-direction: column
+        margin: 20px auto 40px
+    .left
+        flex: 1
+        padding-right: 0px
+    .right
+        flex: 1
+        margin-top: 10px
+    h2
+        margin-top: 10px
+        margin-bottom: 17px
+    .no
+        margin-top: 0
+    h3
+        margin-top: 8px
+        margin-bottom: 15px
+
+    .cwp
+        padding-top: 30px
+    .year
+        padding: 10px 0
+    .skill
+        padding-left: 0px
+        padding-top: 30px
+        
+
+
+    [class^="listSkill"]
+        >li
+            justify-content: space-evenly
+            margin-top: 10px
+
+    
+    [class^="smcircle"]
+        +size(10px,10px)
+        border-radius: 50%
+    .center
+        +flexCenter
+        flex-direction: column
+    .coding
+        margin-top: 30px
+    .listSkill2
+        margin-left: 10px
+    .l
+        margin-right: 10px
+    #footer
+        background-color: $color-green
+        .footer_inner
+            font-family:  'Zen Kurenaido', cursive
+            width: 100%
+            margin: 0 auto
+            text-align: center
+            font-size: 10px
+            padding: 10px
+
+
+        
+
+
+
+@media only screen and (min-width:600px) and (max-width:959px)
+    body
+        position: relative
+    a
+        font-size: 18px
+    h1
+        font-family: 'Lobster', cursive
+        font-size: 38px
+        text-align: center 
+        color: $color-red
+    h2
+        font-family: 'Kaisei Tokumin', cursive
+        font-size: 20px
+    h3
+        font-family:  'Kaisei Tokumin', cursive
+        font-size: 18px
+        line-height: 1.7
+    p,.sp_br
+        font-family:  'Zen Kurenaido', cursive
+        font-size: 16px
+    li
+        font-family:  'Zen Kurenaido', cursive
+        font-size: 16px
+        line-height: 1.7
+    .big-bg
+        background-image: url(../image/aboutipad.png)
+    #page-header
+        z-index: 999
+        
+        width: 100%
+        min-height: 80px
+        
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        position: fixed
+        top: 0
+        background-color: rgba(255,255,255,0.5)
+    
+    .main-nav
+        
+        display: flex
+        z-index: 100
+    li.txt
+        margin: auto 10px
+
+
+    a.about
+        font-size: 20px
+    .line
+        width: 100vh
+        margin-top: -30px
+
+    .bg
+        background-image: url(../image/aboutbgi_ipad.png)
+    .box
+        max-width: 608px
+        max-height: auto
+        display: flex
+        flex-direction: column
+        margin: 20px auto 40px
+    .left
+        flex: 1
+        padding-right: 0px
+    .right
+        flex: 1
+        margin-top: 10px
+    h2
+        margin-top: 10px
+        margin-bottom: 17px
+    .no
+        margin-top: 0
+    h3
+        margin-top: 8px
+        margin-bottom: 15px
+
+    .cwp
+        padding-top: 30px
+    .year
+        padding: 10px 0
+    .skill
+        padding-left: 0px
+        padding-top: 30px
+
+
+    [class^="listSkill"]
+        >li
+            justify-content: space-evenly
+            margin-top: 15px
+
+    [class^="smcircle"]
+        +size(15px,15px)
+        border-radius: 50%
+    .center
+        +flexCenter
+        flex-direction: column
+    .coding
+        margin-top: 30px
+    .listSkill2
+        margin-left: 10px
+    .l
+        margin-right: 10px
+    #footer
+        background-color: $color-green
+        .footer_inner
+            font-family:  'Zen Kurenaido', cursive
+            width: 100%
+            margin: 0 auto
+            text-align: center
+            font-size: 10px
+            padding: 10px
+    

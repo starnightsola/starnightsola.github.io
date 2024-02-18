@@ -1,0 +1,201 @@
+$colorBackground: #474747
+$sceneGradient: linear-gradient(10deg,#F39800,#F1B362,#7B9EC6,#1D2088)
+$colorDarkgray: #6d6868
+$colorGray: #777373
+$colorLightgray: #9b9696
+$colorbuildShadow: #383434
+$colorwindow-orange: #F1B362
+$colorwindow-darkorange: #c68e49
+$colormoon: #edece8
+=size($w,$h:$w)
+  width: $w
+  height: $h
+=flex($j:center,$a:center)
+  display: flex
+  justify-content: $j
+  align-items: $a
+=abpos($l:initial,$t:initial)
+  position: absolute
+  left: $l
+  top: $t
+
+  
+html,body
+  +size(100%)
+  margin: 0
+  +flex
+  background-color: $colorBackground
+.scene
+  +size(800px,550px)
+  position: relative
+  background: $sceneGradient
+  box-shadow: 0px 0px 30px
+  overflow: hidden
+.moon
+  +size(50px,50px)
+  border-radius: 50%
+  background-color: $colormoon
+  position: absolute
+  top: 30px
+  right: 50px
+  box-shadow: 0px 0px 30px rgba($colormoon,0.8)
+.allstars
+  +size(100%)
+  
+  
+  @keyframes flashing
+    0%,100%
+      box-shadow: 0px 0px 30px rgba($colormoon,0.8)
+      opacity: 1
+    60%
+      +size(5px,5px)
+      opacity: 0
+    
+      
+  [class^='star']
+    background-color: $colormoon
+    +size(8px,8px)
+    transform: rotate(45deg) skew(20deg,20deg)
+    animation: flashing 2s infinite
+  @for $i from 1 through 15
+    .star#{$i}
+      $posX: random()*100%
+      $posY: random()*60%
+      +abpos($posX,$posY)
+      animation-delay: $i*-0.1s
+  
+  
+.buildings
+  +size(100%)
+  
+  
+  
+  
+  // ------------------animation
+  @keyframes buildingfirst
+    0%
+      transform: translateX(100%)
+    100%
+      transform: translateX(-100%)
+  @keyframes buildingafter
+    0%
+      transform: translateX(0)
+    100%
+      transform: translateX(-200%)
+  
+.buildingfirst
+  animation: buildingfirst 50s -25s linear infinite
+.buildingafter
+  animation: buildingfirst 50s linear infinite
+  
+  
+  // ------------------animation
+
+.building
+  box-shadow: inset 0px 10px $colorLightgray,inset -10px 0px $colorGray
+  background-color: $colorDarkgray
+  position: absolute
+  bottom: 0
+.building1
+  +size(90px,300px)
+.building2
+  +size(50px,400px)
+  left: 100px
+.building3
+  +size(100px,380px)
+  left: 200px
+.building4
+  +size(120px,260px)
+  left: 320px
+.building5
+  +size(70px,280px)
+  left: 470px
+.building6
+  +size(160px,320px)
+  left: 620px
+.building7
+  +size(300px,140px)
+  left: 400px
+  box-shadow: inset 0px 10px $colorLightgray,inset -10px 0px $colorGray,-10px -5px 10px $colorbuildShadow
+
+.window
+  +size(20px,20px)
+  background-color: $colorwindow-orange
+  margin: 20px 10px
+  box-shadow: inset -5px 5px $colorwindow-darkorange
+  display: inline-block
+.bicycle
+
+  @keyframes rotation
+    0%
+      transform: rotate(0)
+    100%
+      transform: rotate(360deg)
+  .cir
+    +abpos
+    +size(15px,8px)
+    border-radius: 30px
+    background-color: white
+    bottom: 85px
+    left: 95px
+    transform-origin: 15px 35px
+    animation:3s linear infinite rotation
+  .cir2
+    left: 340px
+  img
+    +abpos
+    +size(600px,auto)
+    bottom: -20px
+    left: -70px
+  .picture1
+    opacity: 0
+    -webkit-animation: bicAnime 10s 0s infinite
+    animation: bicAnime 10s 0s infinite
+  .picture2
+    -webkit-animation-delay: 5s
+    animation-delay: 5s
+    
+  @keyframes bicAnime 
+    0%
+      opacity: 0
+    
+    45% 
+      opacity: 1
+    
+
+    60% 
+      opacity: 0
+      z-index: 9
+    
+    100% 
+      opacity: 0
+    
+  
+
+@-webkit-keyframes bicAnime
+  0% 
+    opacity: 0
+  
+  45% 
+    opacity: 1
+
+  
+  60% 
+    opacity: 0
+    z-index: 9
+  
+  100% 
+    opacity: 0
+  
+
+      
+
+  
+  
+
+
+  
+  
+  
+  
+
