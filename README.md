@@ -1,2 +1,2 @@
 # starnightsola.github.io
-ポートフォリオ
+ポートフォリオブログ：https://starnightsola.github.io/
