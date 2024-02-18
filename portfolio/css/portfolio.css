@@ -1,0 +1,872 @@
+* {
+  font-family: "Lobster", "Kaisei Tokumin", "Zen Kurenaido", cursive;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: 1.7;
+}
+
+#pageLoading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #22577E;
+  z-index: 9999999;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: opacity 0.5s 0.5s;
+  transition: opacity 0.5s 0.5s;
+}
+
+body {
+  background-color: #22577E;
+}
+
+body.appear {
+  background-color: white;
+}
+
+.splashbg {
+  display: none;
+  content: "";
+  position: fixed;
+  -webkit-transform: scale(100);
+          transform: scale(100);
+  background-color: #D5EBEA;
+  z-index: 55555;
+  top: calc(50% - 1rem);
+  left: calc(50% - 1rem);
+  width: 2rem;
+  height: 2rem;
+}
+
+body.appear .splashbg {
+  display: block;
+  border-radius: 50%;
+  -webkit-animation: PageAnime 1s forwards;
+          animation: PageAnime 1s forwards;
+}
+@-webkit-keyframes PageAnime {
+  0% {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none;
+  }
+}
+@keyframes PageAnime {
+  0% {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none;
+  }
+}
+
+#top {
+  opacity: 0;
+}
+
+body.appear #top {
+  -webkit-animation: PageAnimeAppear 1s 0.8s forward;
+          animation: PageAnimeAppear 1s 0.8s forward;
+  opacity: 1;
+}
+@-webkit-keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-family: "Lobster", cursive;
+  text-decoration: none;
+  font-size: 20px;
+  color: #22577E;
+  display: block;
+}
+a:hover {
+  color: #A45D5D;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.coding {
+  font-family: "Zen Kurenaido", cursive;
+  font-size: 18px;
+}
+
+.logo {
+  width: 93px;
+  height: auto;
+  margin-top: 14px;
+  margin-left: 20px;
+}
+
+h1 {
+  font-family: "Lobster", "Kaisei Tokumin", cursive;
+  font-size: 50px;
+  text-align: center;
+  color: #A45D5D;
+}
+
+h2 {
+  font-family: "Kaisei Tokumin", cursive;
+  font-size: 30px;
+  line-height: 1.7;
+}
+
+.h2top {
+  font-family: "Kaisei Tokumin", cursive;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+h3 {
+  font-family: "Kaisei Tokumin", cursive;
+  font-size: 22px;
+}
+
+p, .sp_br {
+  font-family: "Zen Kurenaido", cursive;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+li {
+  font-family: "Zen Kurenaido", cursive;
+  font-size: 18px;
+}
+
+#top {
+  max-width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#page-header {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.left_header {
+  z-index: 999;
+  position: fixed;
+  width: 123px;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav {
+  margin: 20px auto;
+  line-height: 1.7;
+  z-index: 100;
+}
+
+a.works {
+  font-size: 30px;
+  color: #A45D5D;
+}
+
+.right_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.bgc {
+  background-color: #D5EBEA;
+  width: 123px;
+  min-height: 100vh;
+}
+
+.rootone {
+  width: calc(100% - 123px);
+  min-height: 100vh;
+  background-image: url(../../image/home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.point {
+  width: 462px;
+  height: 339px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.line {
+  margin-top: -100px;
+}
+
+#content {
+  max-width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bg {
+  background-image: url(../../100%/image/100%bgi.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.box {
+  max-width: 1004px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 50px auto 80px;
+}
+
+.pagetop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.leftpc, .rightsp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.leftpc {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.rightsp {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.imgDivpc {
+  border-radius: 20px;
+  max-width: 664px;
+  max-height: 410px;
+}
+
+.imgDivsp {
+  border-radius: 20px;
+  max-width: 255px;
+  max-height: 554px;
+}
+
+.sm {
+  text-align: center;
+  font-size: 14px;
+}
+
+.word {
+  padding: 80px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto 40px;
+}
+
+[class^=block] {
+  width: 47px;
+  height: 47px;
+  margin: 10px;
+}
+
+.block1 {
+  background-color: #89D0F1;
+}
+
+.block2 {
+  background-color: #B9DEDB;
+}
+
+.concept {
+  margin-top: 130px;
+}
+
+.page {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.marginleft {
+  padding-left: 40px;
+}
+
+.right {
+  margin-left: 100px;
+}
+
+#footer {
+  background-color: #D5EBEA;
+}
+#footer .footer_inner {
+  font-family: "Zen Kurenaido", cursive;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 599px) {
+  body {
+    position: relative;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .coding {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-family: "Lobster", "Kaisei Tokumin", cursive;
+    font-size: 26px;
+    text-align: center;
+    color: #A45D5D;
+  }
+
+  h2 {
+    font-family: "Kaisei Tokumin", cursive;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .h2top {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  h3 {
+    font-family: "Kaisei Tokumin", cursive;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  p, .sp_br {
+    font-family: "Zen Kurenaido", cursive;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  li {
+    font-family: "Zen Kurenaido", cursive;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .left_header {
+    z-index: 999;
+    width: 100%;
+    min-height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  nav {
+    margin: auto auto;
+    line-height: 1.7;
+    z-index: 100;
+  }
+
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 100;
+  }
+
+  li.txt {
+    margin: auto 10px;
+  }
+
+  a.works {
+    font-size: 20px;
+  }
+
+  .right_header {
+    display: none;
+  }
+
+  .line {
+    width: 100vh;
+    margin-top: -30px;
+  }
+
+  #page-header {
+    background-image: url(../../image/homesp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 auto;
+  }
+
+  .bg {
+    background-image: url(../../works/image/workbgisp.png);
+  }
+
+  .box {
+    max-width: 499px;
+    max-height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px auto 40px;
+    padding: 0 15px;
+  }
+
+  .pagetop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .leftpc, .rightsp {
+    margin-bottom: 30px;
+  }
+
+  .imgDivpc {
+    border-radius: 5px;
+    max-width: 350px;
+    max-height: 225px;
+  }
+
+  .imgDivsp {
+    border-radius: 5px;
+    max-width: 301px;
+    max-height: 554px;
+  }
+
+  .sp {
+    max-width: 301px;
+    max-height: 554px;
+  }
+
+  .sm {
+    font-size: 10px;
+  }
+
+  .word {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px auto;
+    margin: 0px auto;
+  }
+
+  .color {
+    margin: 10px auto;
+  }
+
+  [class^=block] {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+  }
+
+  .concept {
+    margin-top: 20px;
+  }
+
+  .page {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .marginleft {
+    padding-left: auto;
+  }
+
+  .right {
+    padding-left: 0px;
+  }
+
+  #footer {
+    background-color: #D5EBEA;
+  }
+  #footer .footer_inner {
+    font-family: "Zen Kurenaido", cursive;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  body {
+    position: relative;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  .coding {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-family: "Lobster", "Kaisei Tokumin", cursive;
+    font-size: 30px;
+    text-align: center;
+    color: #A45D5D;
+  }
+
+  h2 {
+    font-family: "Kaisei Tokumin", cursive;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .h2top {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h3 {
+    font-family: "Kaisei Tokumin", cursive;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  p, .sp_br {
+    font-family: "Zen Kurenaido", cursive;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  li {
+    font-family: "Zen Kurenaido", cursive;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .left_header {
+    z-index: 999;
+    width: 100%;
+    min-height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  nav {
+    margin: auto auto;
+    line-height: 1.7;
+    z-index: 100;
+  }
+
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 100;
+  }
+
+  li.txt {
+    margin: auto 10px;
+  }
+
+  a.works {
+    font-size: 22px;
+  }
+
+  .right_header {
+    display: none;
+  }
+
+  .line {
+    width: 100vh;
+    margin-top: -30px;
+  }
+
+  #page-header {
+    background-image: url(../../image/homeipad.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 auto;
+  }
+
+  .bg {
+    background-image: url(../../works/image/workbgiipad.png);
+  }
+
+  .box {
+    max-width: 608px;
+    max-height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px auto 40px;
+    padding: 0 10px;
+  }
+
+  .pagetop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .leftpc, .rightsp {
+    margin-bottom: 40px;
+  }
+
+  .imgDivpc {
+    border-radius: 10px;
+    max-width: 608px;
+    max-height: 394px;
+  }
+
+  .imgDivsp {
+    border-radius: 10px;
+    max-width: 302px;
+    max-height: 554px;
+  }
+
+  .sp {
+    max-width: 302px;
+    max-height: 554px;
+  }
+
+  .sm {
+    font-size: 10px;
+  }
+
+  .word {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px auto;
+    margin: 0px auto;
+  }
+
+  .color {
+    margin: 20px auto;
+  }
+
+  [class^=block] {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+  }
+
+  .concept {
+    margin-top: 30px;
+  }
+
+  .page {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .marginleft {
+    padding-left: auto;
+  }
+
+  .right {
+    padding-left: 0px;
+  }
+
+  #footer {
+    background-color: #D5EBEA;
+  }
+  #footer .footer_inner {
+    font-family: "Zen Kurenaido", cursive;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+  }
+}

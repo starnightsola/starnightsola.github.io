@@ -1,0 +1,89 @@
+doctype html
+html(lang="ja")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title ポートフォリオ
+        link(rel="icon", href="../image/logonew.svg")
+        link(rel="stylesheet", href="../css/reset.css")
+        link(rel="stylesheet", href="css/portfolio.css")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&display=swap")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap")
+    body 
+        #pageLoading
+        .splashbg
+        #top
+            header#page-header 
+                .left_header
+                    a(href="../index.html")
+                        img.logo(src="../image/logotop.svg", alt="ホーム")
+                    nav
+                        ul.main-nav
+                            li.txt
+                                a(href="../about/about.html") About
+                            li.txt
+                                a.works(href="../works/works.html") Works
+                            li.txt
+                                a(href="../contact/contact.html") Contact
+                .right_header
+                    .bgc
+                    .rootone
+                        img.point(src="image/portfolio.png", alt="")
+                        
+        img.line(src="../image/line.png", alt="")
+        section#content.bg
+            
+            
+            h1 ポートフォリオ
+            .box
+                .pagetop
+                    .leftpc
+                        .imgDivpc
+                            img.pc(src="image/portfoliopc.png", alt="")
+                        p.sm パソコン版
+                    .rightsp
+                        .imgDivsp
+                            img.sp(src="image/portfoliosp.png", alt="")
+                        p.sm スマホ版
+                    
+                
+                .word 
+                    
+                    .skill 
+                        h2 Ps/Ai/Fr/Xd
+                        h2 Pug/Sass/JavaScript/jQuery
+                        h3 制作期間:1ヶ月
+
+
+                        
+                    .concept
+                        h3 ・デザインコンセプト：
+                        p まず、配色について。水族館が好きなので、主色は青系の色と浅葱色にして、波紋は、白で表現した。
+                        .color 
+                            .block1
+                            .block2
+ 
+                        p ローディングページでは、ロゴマークが落ちて波紋が広がっていき、その背景は、雨が降っているものにした。
+                            <br class="sp_br"><br>ページトップの写真は写真スタジオに依頼して、撮っていただいた写真である。
+                            <br class="sp_br"><br>Aboutページに自分が撮影したイルカの写真を使って、背景に水しぶきをイメージして、描いたものと合わせた。
+                            <br class="sp_br"><br>作品集のページで、写真を魚の形にして、マウスを乗せると、泡が出てくる。
+                            
+
+
+                    .page
+                        .left
+                            h3 ・ページ遷移アニメーション：
+                            .marginleft
+                                p 背景色が円形に中央へ縮小
+
+
+                        
+        footer#footer 
+            .footer_inner コウビシン
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js") 
+        script(src="../js/splash.js")
+                        
+
+
